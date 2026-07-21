@@ -16,3 +16,4 @@ Reachable only when you type them (Claude Code: `disable-model-invocation: true`
 Model- or user-reachable (rich trigger phrasing so the model can reach for them).
 
 - **[grilling](./grilling/SKILL.md)** — Interview the user relentlessly about a plan, decision, or idea until every branch of the decision tree is resolved.
+- **[grill-to-plan](./grill-to-plan/SKILL.md)** — Close a grilling session by writing the settled plan as a contract and opening it in the browser as an HTML plan review — interface diffs, build order, open questions.

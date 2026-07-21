@@ -6,7 +6,8 @@ The skills stay small, composable, and easy to adapt, per the original repo's ph
 
 ## Changes from upstream
 
-- **`grill-me`**: the session now ends by producing a detailed plan artifact — module boundaries, concrete `interface`/function signatures, data model, error cases, and open questions — instead of just a conversational summary. Signatures in the plan are treated as contracts during implementation.
+- **`grill-me`**: the session now ends by firing **`grill-to-plan`** — a plan review in the browser — instead of a conversational summary.
+- **`grill-to-plan`** (new): closes a grilling session by writing the settled plan as a contract — modules, concrete `interface`/function signatures, data model, error cases, build order, open questions — and opening it in the local browser as a self-contained HTML **plan review**, each touched module's interface rendered as a git-style diff you approve before implementation starts.
 - Renamed `setup-matt-pocock-skills` → `setup-vagabondms-skills`.
 - Dropped the `personal/` and `deprecated/` buckets.
 
@@ -103,3 +104,4 @@ General workflow tools, not code-specific.
 **Model-invoked**
 
 - **[grilling](./skills/productivity/grilling/SKILL.md)** — Interview the user relentlessly about a plan, decision, or idea until every branch of the decision tree is resolved. The reusable loop behind `grill-me` and `grill-with-docs`.
+- **[grill-to-plan](./skills/productivity/grill-to-plan/SKILL.md)** — Close a grilling session by writing the settled plan as a contract and opening it in the browser as an HTML plan review — interface diffs, build order, open questions — gated on your approval.

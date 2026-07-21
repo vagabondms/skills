@@ -1,6 +1,6 @@
 {
   "name": "vagabondms-skills",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "vagabondms' agent skills for real engineering — grilling with detailed interface plans, spec/ticket flows, TDD, code review, domain modelling and more. Forked from mattpocock/skills.",
   "author": {
     "name": "vagabondms",
@@ -38,6 +38,7 @@
     "./skills/engineering/resolving-merge-conflicts",
     "./skills/productivity/grill-me",
     "./skills/productivity/grilling",
+    "./skills/productivity/grill-to-plan",
     "./skills/productivity/handoff",
     "./skills/productivity/teach",
     "./skills/productivity/writing-great-skills"

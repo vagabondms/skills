@@ -18,11 +18,16 @@ A `wayfinder` unit — a child **Issue** of a `wayfinder:map` holding a *questio
 **Triage role**:
 A canonical state-machine label applied to an **Issue** during triage (e.g. `needs-triage`, `ready-for-afk`). Each role maps to a real label string in the **Issue tracker** via `docs/agents/triage-labels.md`.
 
+**Plan review**:
+The artifact that closes a grilling session — the settled plan written as a contract by `grill-to-plan` and opened in the browser as a self-contained HTML page, each touched module's interface rendered as a git-style diff, gated on the user's approval.
+_Avoid_: plan doc, plan summary
+
 ## Relationships
 
 - An **Issue tracker** holds many **Issues**
 - An **Issue** carries one **Triage role** at a time
 - A **Decision ticket** is an **Issue** (a child of a `wayfinder:map`)
+- A grilling session ends in a **Plan review**, approved before implementation starts
 
 ## Flagged ambiguities
 
