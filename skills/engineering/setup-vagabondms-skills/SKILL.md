@@ -1,10 +1,10 @@
 ---
-name: setup-minseok-skills
+name: setup-vagabondms-skills
 description: Configure this repo for the engineering skills — set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills.
 disable-model-invocation: true
 ---
 
-# Setup Minseok's Skills
+# Setup vagabondms' Skills
 
 Scaffold the per-repo configuration that the engineering skills assume:
 

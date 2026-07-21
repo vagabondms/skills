@@ -1,8 +1,8 @@
 {
-  "name": "minseok-skills",
+  "name": "vagabondms-skills",
   "version": "0.1.0",
   "private": true,
-  "description": "Minseok's agent skills for real engineering (forked from mattpocock/skills)",
+  "description": "vagabondms' agent skills for real engineering (forked from mattpocock/skills)",
   "repository": {
     "type": "git",
     "url": "https://github.com/vagabondms/skills"

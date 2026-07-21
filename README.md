@@ -1,4 +1,4 @@
-# Minseok's Skills
+# vagabondms' Skills
 
 My personal agent skills for real engineering work — forked from [mattpocock/skills](https://github.com/mattpocock/skills) (MIT) and adapted to how I work.
 
@@ -7,7 +7,7 @@ The skills stay small, composable, and easy to adapt, per the original repo's ph
 ## Changes from upstream
 
 - **`grill-me`**: the session now ends by producing a detailed plan artifact — module boundaries, concrete `interface`/function signatures, data model, error cases, and open questions — instead of just a conversational summary. Signatures in the plan are treated as contracts during implementation.
-- Renamed `setup-matt-pocock-skills` → `setup-minseok-skills`.
+- Renamed `setup-matt-pocock-skills` → `setup-vagabondms-skills`.
 - Dropped the `personal/` and `deprecated/` buckets.
 
 ## Quickstart (30-second setup)
@@ -18,9 +18,9 @@ The skills stay small, composable, and easy to adapt, per the original repo's ph
 npx skills@latest add vagabondms/skills
 ```
 
-2. Pick the skills you want, and which coding agents you want to install them on. **Make sure you select `/setup-minseok-skills`**.
+2. Pick the skills you want, and which coding agents you want to install them on. **Make sure you select `/setup-vagabondms-skills`**.
 
-3. Run `/setup-minseok-skills` in your agent. It will:
+3. Run `/setup-vagabondms-skills` in your agent. It will:
    - Ask you which issue tracker you want to use (GitHub, Linear, or local files)
    - Ask you what labels you apply to tickets when you triage them (`/triage` uses labels)
    - Ask you where you want to save any docs we create
@@ -35,17 +35,17 @@ Inside Claude Code:
 
 ```
 /plugin marketplace add vagabondms/skills
-/plugin install minseok-skills@minseok
+/plugin install vagabondms-skills@vagabondms
 ```
 
 Or from your shell:
 
 ```bash
 claude plugin marketplace add vagabondms/skills
-claude plugin install minseok-skills@minseok
+claude plugin install vagabondms-skills@vagabondms
 ```
 
-Then run `/setup-minseok-skills` once per repo, exactly as in the quickstart above.
+Then run `/setup-vagabondms-skills` once per repo, exactly as in the quickstart above.
 
 Two ways to install, two philosophies:
 
@@ -72,7 +72,7 @@ Skills I use daily for code work.
 - **[grill-with-docs](./skills/engineering/grill-with-docs/SKILL.md)** — Grilling session that also builds your project's domain model, sharpening terminology and updating `CONTEXT.md` and ADRs inline.
 - **[triage](./skills/engineering/triage/SKILL.md)** — Move issues through a state machine of triage roles.
 - **[improve-codebase-architecture](./skills/engineering/improve-codebase-architecture/SKILL.md)** — Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.
-- **[setup-minseok-skills](./skills/engineering/setup-minseok-skills/SKILL.md)** — Configure this repo for the engineering skills (issue tracker, triage labels, domain doc layout). Run once per repo before using the other engineering skills.
+- **[setup-vagabondms-skills](./skills/engineering/setup-vagabondms-skills/SKILL.md)** — Configure this repo for the engineering skills (issue tracker, triage labels, domain doc layout). Run once per repo before using the other engineering skills.
 - **[to-spec](./skills/engineering/to-spec/SKILL.md)** — Turn the current conversation into a spec and publish it to the issue tracker. No interview — just synthesizes what you've already discussed.
 - **[to-tickets](./skills/engineering/to-tickets/SKILL.md)** — Break any plan, spec, or conversation into a set of tracer-bullet tickets, each declaring its blocking edges — written as text in a local file, or as native blocking links on a real tracker.
 - **[implement](./skills/engineering/implement/SKILL.md)** — Build the work described by a spec or set of tickets, driving `/tdd` at pre-agreed seams and closing out with `/code-review` before committing.
