@@ -34,4 +34,4 @@ The session walks the plan as a tree of decisions, resolving dependencies betwee
 
 ## The plan (fork customization)
 
-In this fork, a `grill-me` session doesn't end at shared understanding — it ends with a written plan artifact. For code-touching plans that means module boundaries, concrete `interface`/function signatures, the data model, error and edge cases, and explicit open questions. Signatures in the plan are contracts: implementation fills in bodies, and any signature change gets flagged back first.
+In this fork, a `grill-me` session doesn't end at shared understanding — it ends with a written plan artifact. The session announces this deliverable up front, and the moment you confirm shared understanding, the very next response is the plan — the two anchors that keep it from getting lost in a long interview. For code-touching plans that means module boundaries, concrete `interface`/function signatures, the data model, error and edge cases, and explicit open questions. Signatures in the plan are contracts: implementation fills in bodies, and any signature change gets flagged back first.

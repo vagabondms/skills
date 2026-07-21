@@ -4,11 +4,11 @@ description: A relentless interview to sharpen a plan or design.
 disable-model-invocation: true
 ---
 
-Run a `/grilling` session.
+Run a `/grilling` session. At the start of the session, announce that its end deliverable is the plan artifact described below, so we both track it from the first question.
 
 ## The plan
 
-Once we confirm shared understanding, write the plan down as an artifact — not a loose summary of the conversation. When the plan touches code, it must be detailed enough that the interfaces are decided before implementation starts:
+The moment I confirm we have reached shared understanding, your next response must be the plan artifact — nothing else comes first. Write it as a real plan, not a loose summary of the conversation. When the plan touches code, it must be detailed enough that the interfaces are decided before implementation starts:
 
 - **Module boundaries** — which modules/files are created or changed, what each is responsible for, and what depends on what.
 - **Public interfaces** — for every new or changed public surface, write the actual signatures: `interface`/`type` declarations, function signatures with parameter and return types, API endpoint specs (method, path, request/response schemas), or the equivalent in the project's language. No hand-waving like "a function that handles X".
