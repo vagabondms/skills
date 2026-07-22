@@ -26,7 +26,14 @@ Treat the signatures as **contracts**: implementation fills in bodies, but chang
 
 ## Render the review
 
-Write the review as a single self-contained HTML file in the OS temp directory so nothing lands in the repo. Resolve the temp dir from `$TMPDIR`, falling back to `/tmp` (or `%TEMP%` on Windows), and write to `<tmpdir>/plan-review-<slug>-<timestamp>.html` so each run gets a fresh file. Open it for me — `open <path>` on macOS, `xdg-open <path>` on Linux, `start <path>` on Windows — and tell me the absolute path (when no browser can open, the path alone is enough).
+Write the review as a single self-contained HTML file — all CSS inline, no CDN, no scripts (see [PLAN-HTML.md](PLAN-HTML.md)) — in the OS temp directory so nothing lands in the repo. Resolve the temp dir from `$TMPDIR`, falling back to `/tmp` (or `%TEMP%` on Windows), and write to `<tmpdir>/plan-review-<slug>-<timestamp>.html` so each run gets a fresh file.
+
+Then get it in front of me, in this order:
+
+1. **System browser** — run `open <path>` (macOS), `xdg-open <path>` (Linux), `start <path>` (Windows). This works when the shell runs on my actual machine (Claude Code in a terminal).
+2. **In-app viewer** — if the open command is missing, errors, or the shell is sandboxed away from my display (a Claude app / Cowork session, a remote container), attach or send the HTML file into the conversation instead, so it renders in the app's own viewer. The file is fully self-contained, so it renders styled there too.
+
+In both cases tell me the absolute path. Never let the review die silently: if you can't confirm a browser opened, fall back to attaching the file — a plan review I never see is a plan review that didn't happen.
 
 The centrepiece is the **change surface**: one card per module, its interface rendered as a git-style diff — current lines red, proposed lines green — so the plan is reviewed like a pull request. See [PLAN-HTML.md](PLAN-HTML.md) for the scaffold, card patterns, diff styling, and tone.
 
@@ -34,6 +41,6 @@ When the plan touches code, use the project's domain glossary vocabulary, respec
 
 ## The gate
 
-Done when the review is open in the browser and every decision from the session appears in it. Then stop: ask me to review, and wait. Implementation starts only after I approve in the conversation — until then the review file is the only thing this session writes. When review turns up a change, amend the plan and re-render rather than defending it.
+Done when the review is in front of me — a browser tab or the in-app viewer — and every decision from the session appears in it. Then stop: ask me to review, and wait. Implementation starts only after I approve in the conversation — until then the review file is the only thing this session writes. When review turns up a change, amend the plan and re-render rather than defending it.
 
 After approval, name my exits so I can type one: `/implement` to build it here, `/to-spec` to publish it to the issue tracker, `/to-tickets` to split it into tickets.

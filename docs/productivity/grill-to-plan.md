@@ -20,7 +20,7 @@ Type `/grill-to-plan`, or the agent reaches for it automatically the moment a gr
 
 ## The plan review
 
-One file in your OS temp directory — nothing lands in the repo. Top to bottom: the decisions the grill resolved, the numbered build order, the **change surface** — one card per module with its interface diff — then the data model, how failures surface in the types at each seam, and the open questions. At the bottom sits the gate: implementation starts only when you approve in the terminal.
+One file in your OS temp directory — nothing lands in the repo. The page is fully self-contained: inline CSS, system fonts, no CDN and no scripts, so it renders styled in a system browser, offline, and in the Claude app's viewer alike. Where the shell can launch a browser (Claude Code in a terminal) it opens a tab; where it can't (a Claude app or remote session), the file is attached to the conversation and renders in the app's viewer instead. Top to bottom: the decisions the grill resolved, the numbered build order, the **change surface** — one card per module with its interface diff — then the data model, how failures surface in the types at each seam, and the open questions. At the bottom sits the gate: implementation starts only when you approve.
 
 ## Signatures are contracts
 
@@ -28,9 +28,10 @@ The diff is not an illustration — it is the contract. Implementation fills in 
 
 ## It's working if
 
-- A grilling session's last act is a browser tab opening, not a wall of markdown in the terminal.
+- A grilling session's last act is the review landing in front of you — a browser tab, or the file rendering in the app's viewer — not a wall of markdown in the terminal.
+- The page arrives fully styled everywhere, including offline and in-app — no blank-looking review because a CDN was unreachable.
 - Every red line in a diff exists in the codebase today; every green line traces to a decision from the session.
-- The agent stops after the tab opens and waits for your approval before touching any code.
+- The agent stops after the review opens and waits for your approval before touching any code.
 
 ## Where it fits
 
